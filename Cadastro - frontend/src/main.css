@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    --black: #000000;
+    --gray1: #e1dfdf;
+    --gray2: #cecece;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--gray1);
+}
+
+
+header {
+    padding: .25em;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: var(--black);
+    z-index: 999;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main>div.container-data{
+    margin-top: 70px;
+}
+
+.modal {
+    border: 1px solid var(--black);
+    background-color: var(--gray2);
+    box-shadow: 0px 0px 23px -15px #000000DD;
+    border-radius: 5px;
+    padding: 1em;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin: 2em;
+    position: sticky;
+}
+
+.modal h1 {
+    display: block;
+    border-bottom: 1px solid var(--black);
+    margin-bottom: .5em;
+    padding-top: .5em;
+    margin: 0 0 .25em 0;
+    padding: 0;
+}
+
+.modal form > div {
+    margin-bottom: 1em;
+}
+
+.modal form > div > label {
+    display: block;
+}
+
+.modal form > div > input {
+    width: 100%;
+    border: none;
+    background-color: var(--gray2);
+    border-bottom: 1px solid var(--black);
+}
+
+.modal div.action {
+    display: flex;
+    width: 100%;
+    margin-top: -5px;
+    justify-content: center;
+}
+
+.modal .action>button{
+    flex: 1;
+    margin: 10px;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    font-size: x-large;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+header>div.action-bar{
+    position: fixed;
+    padding: 15px;
+    left:15%;
+}
+
+header>div.action-bar>input{
+    width: 200px;
+    color:var(--white);
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    margin-right: 5px;
+}
+
+header>div.action-bar>button{
+    background-color: var(--black);
+    border: none;
+    font-size: x-large;
+    color: var(--white);
+    cursor: pointer;
+    margin-left: 20px;
+}
+header>div.action-bar>img{
+    position: relative;
+    border-left: 1px solid var(--white);
+    padding-left: 5px;
+    height: 20px;
+    left: -40px;
+    top: 5px;
+}
