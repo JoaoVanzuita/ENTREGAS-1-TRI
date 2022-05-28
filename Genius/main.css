@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+main{
+    border: 10px solid black;
+    border-radius: 100%;
+    position: relative;
+    top:40px;
+    left: 50%;
+    transform: translatex(-50%);
+    display: none;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:  50% 50%;
+    height: 600px;
+    width: 600px;
+}
+
+main>div{
+    border: 5px solid black;
+    flex: 1;
+}
+
+main>div:nth-child(1){
+    background-color: #0000ff;
+    border-radius: 100% 0% 0% 0%;
+}
+
+main>div:nth-child(2){
+    background-color: #ff0000;
+    border-radius: 0% 100% 0% 0%;
+}
+
+main>div:nth-child(3){
+    background-color: green;
+    border-radius: 0% 0% 0% 100%;
+}
+main>div:nth-child(4){
+    background-color: yellow;
+    border-radius: 0% 0% 100% 0%;
+}
+
+main>div.animate{
+    animation: pisca 1s ease-in-out;
+}
+
+@keyframes pisca {
+
+    /*Se não tiver o 0% ele pega a cor atual*/
+    50%{
+
+        background-color: white;
+
+    }
+    /*repete o primeiro se não tiver o 100%*/
+}
+
+#botao{
+    position:relative;
+    border-radius: 35%;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 150px;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#perdeu{
+    text-align: center;
+    display: none;
+    margin-top: 250px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+
+}
+#reiniciar{
+
+    display: none;
+    margin-top:100px;
+    bottom: 50px;
+    border-radius: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+
+}
+
+#pontuacao{
+    display:none;
+    width: 120px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+
+}
+
+header{
+    margin-top: 200px;
+    display: flex;
+}
+
+h1{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#contagem{
+    width: 60px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100px;
+    color: #d60404;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
